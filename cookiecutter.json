@@ -1,0 +1,12 @@
+{
+  "author_name": "Vince Forgione",
+  "author_email": "vince@email.com",
+  "project_name": "My Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "short_description": "A library that does stuff",
+  "license": [
+    "MIT",
+    "GNU GPL v3.0"
+  ]
+}

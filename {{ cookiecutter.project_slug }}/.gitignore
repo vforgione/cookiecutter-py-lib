@@ -1,0 +1,9 @@
+.coverage
+.mypy_cache/
+.nox/
+.pytest_cache/
+.vscode/settings.json
+__pycache__/
+_build/
+build/
+dist/

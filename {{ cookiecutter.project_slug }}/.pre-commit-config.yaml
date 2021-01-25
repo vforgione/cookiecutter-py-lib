@@ -1,0 +1,40 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args:
+    - --fix=lf
+  - id: no-commit-to-branch
+    args:
+    - --branch
+    - main
+  - id: trailing-whitespace
+- repo: local
+  hooks:
+  - id: format
+    name: nox format
+    entry: nox -s format
+    language: system
+    types: [python]
+    pass_filenames: false
+  - id: lint
+    name: nox lint
+    entry: nox -s lint
+    language: system
+    types: [python]
+    pass_filenames: false
+  - id: vet
+    name: nox vet
+    entry: nox -s vet
+    language: system
+    types: [python]
+    pass_filenames: false
+  - id: test
+    name: nox test
+    entry: nox -s test
+    language: system
+    types: [python]
+    pass_filenames: false
